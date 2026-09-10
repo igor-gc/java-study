@@ -4,7 +4,7 @@ public class Cars {
     private String name;
     private double maxSpeed;
     // static belongs to the class, so all objects share the same value
-    public static double speedLimit = 250;
+    private static double speedLimit = 250;
 
     public Cars(String name, double maxSpeed) {
         this.name = name;
@@ -16,6 +16,14 @@ public class Cars {
         System.out.println("Name: " + this.name);
         System.out.println("Max speed: " + this.maxSpeed);
         System.out.println("Speed limit: " + Cars.speedLimit);
+    }
+
+    public static double getSpeedLimit() {
+        return Cars.speedLimit;
+    }
+
+    public static void setSpeedLimit(double speedLimit) {
+        Cars.speedLimit = speedLimit;
     }
 
     public String getName() {
