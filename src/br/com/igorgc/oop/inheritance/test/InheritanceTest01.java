@@ -11,13 +11,11 @@ public class InheritanceTest01 {
         address.setZipCode("012345-209");
 
         Person person = new Person("Paul Allen");
-        person.setName("John Smith");
         person.setTaxId("1111111");
         person.setAddress(address);
         person.print();
 
         Employee employee = new Employee("James Cameron");
-        employee.setName("Robert Johnson");
         employee.setTaxId("2222222");
         employee.setAddress(address);
         employee.setSalary(20000);
