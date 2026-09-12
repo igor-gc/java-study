@@ -1,9 +1,13 @@
 package br.com.igorgc.oop.inheritance.domain;
 
 public class Person {
-    private String name;
-    private String taxId;
-    private Address address;
+    protected String name;
+    protected String taxId;
+    protected Address address;
+
+    public Person(String name){
+        this.name = name;
+    }
 
     public void print() {
         System.out.println(this.name);
