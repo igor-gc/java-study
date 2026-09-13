@@ -5,7 +5,20 @@ public class Person {
     protected String taxId;
     protected Address address;
 
+    static {
+        System.out.println("Inside Person static initialization block");
+    }
+
+    {
+        System.out.println("Inside Person initialization block 1");
+    }
+
+    {
+        System.out.println("Inside Person initialization block 2");
+    }
+
     public Person(String name){
+        System.out.println("Inside Person constructor");
         this.name = name;
     }
 
