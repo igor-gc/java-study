@@ -1,10 +1,14 @@
 package br.com.igorgc.oop.finalmodifier.domain;
 
-public class Car {
+public class Buyer {
     private String name;
 
-    public static final double SPEED_LIMIT = 250;
-    public final Buyer BUYER = new Buyer();
+    @Override
+    public String toString() {
+        return "Buyer{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 
     public String getName() {
         return name;
