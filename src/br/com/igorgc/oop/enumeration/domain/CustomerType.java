@@ -13,6 +13,15 @@ public enum CustomerType {
         this.reportName = reportName;
     }
 
+    public static CustomerType getByReportValue(String reportName) {
+        for (CustomerType customerType : values()) {
+            if (customerType.getReportName().equals(reportName)) {
+                return customerType;
+            }
+        }
+        return null;
+    }
+
     public String getReportName() {
         return reportName;
     }
