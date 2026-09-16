@@ -1,9 +1,7 @@
 package br.com.igorgc.oop.enumeration.domain;
 
 public class Customer {
-    public enum PaymentType {
-        DEBIT, CREDIT
-    }
+
     private String name;
     private CustomerType customerType;
     private PaymentType paymentType;
