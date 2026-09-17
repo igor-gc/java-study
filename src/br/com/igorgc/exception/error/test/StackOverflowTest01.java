@@ -1,4 +1,4 @@
-package br.com.igorgc.exception;
+package br.com.igorgc.exception.error.test;
 
 public class StackOverflowTest01 {
     public static void main(String[] args) {
