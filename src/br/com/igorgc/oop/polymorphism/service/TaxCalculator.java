@@ -1,6 +1,5 @@
 package br.com.igorgc.oop.polymorphism.service;
 
-import br.com.igorgc.oop.polymorphism.domain.Computer;
 import br.com.igorgc.oop.polymorphism.domain.Product;
 import br.com.igorgc.oop.polymorphism.domain.Tomato;
 
@@ -14,7 +13,11 @@ public class TaxCalculator {
         System.out.println("Product: " + product.getName());
         System.out.println("Price: " + product.getPrice());
         System.out.println("Tax to be paid: " + tax);
+
+        if (product instanceof Tomato) {
+            String expirationDate = ((Tomato) product).getExpirationDate();
+
+            System.out.println(expirationDate);
+        }
     }
-
-
 }
