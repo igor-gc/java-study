@@ -1,4 +1,4 @@
-package br.com.igorgc.utilityclasses.date;
+package br.com.igorgc.utilityclasses.formatting.test;
 
 import java.text.DateFormat;
 import java.util.Calendar;
