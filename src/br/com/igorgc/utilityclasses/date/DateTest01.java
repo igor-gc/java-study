@@ -3,7 +3,6 @@ package br.com.igorgc.utilityclasses.date;
 import java.util.Date;
 
 public class DateTest01 {
-
     public static void main(String[] args) {
         Date date = new Date(1613061109953L); // milliseconds since Unix epoch
 
