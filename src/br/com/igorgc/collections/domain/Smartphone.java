@@ -11,7 +11,7 @@ public class Smartphone {
     }
 
     // Reflexive: x.equals(x) must return true for any non-null x.
-    // Symmetric: if x.equals(y) is true, then y.equals(x) must also be true.
+    // Symmetric: if x.equals(y) is true, y.equals(x) must also be true.
     // Transitive: if x.equals(y) and y.equals(z) are true,
     // then x.equals(z) must also be true.
     // Consistent: repeated calls to x.equals(y) must return the same result
@@ -36,6 +36,15 @@ public class Smartphone {
 
         return serialNumber != null &&
                 serialNumber.equals(smartphone.serialNumber);
+    }
+
+    // If x.equals(y) == true, then x.hashCode() == y.hashCode().
+    // If x.hashCode() != y.hashCode(), x.equals(y) must be false.
+    // Equal hash codes do not necessarily mean that the objects are equal.
+
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : serialNumber.hashCode();
     }
 
     public String getSerialNumber() {
