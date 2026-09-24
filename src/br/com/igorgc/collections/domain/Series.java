@@ -2,7 +2,7 @@ package br.com.igorgc.collections.domain;
 
 import java.util.Objects;
 
-public class Series {
+public class Series implements Comparable<Series> {
 
     private Long id;
     private String name;
@@ -70,5 +70,25 @@ public class Series {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public int compareTo(Series otherSeries) {
+        // Negative if this < otherSeries
+        // Zero if this == otherSeries
+        // Positive if this > otherSeries
+
+//        if (this.id < otherSeries.getId()) {
+//            return -1;
+//        } else if (this.id.equals(otherSeries.getId())) {
+//            return 0;
+//        } else {
+//            return 1;
+//        }
+
+        return this.name.compareTo(otherSeries.getName());
+//        return Double.compare(rating, otherSeries.getRating());
+//        return Double.valueOf(rating).compareTo(otherSeries.getRating());
+//        return this.id.compareTo(otherSeries.getId());
     }
 }
