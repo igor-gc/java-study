@@ -10,4 +10,8 @@ public class ProductComparators {
     public static int compareByPrice(Product product1, Product product2) {
         return Double.compare(product1.getPrice(), product2.getPrice());
     }
+
+    public int compareByPriceNonStatic(Product product1, Product product2) {
+        return Double.compare(product1.getPrice(), product2.getPrice());
+    }
 }
