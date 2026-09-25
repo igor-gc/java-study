@@ -7,6 +7,14 @@ public class Series implements Comparable<Series> {
     private Long id;
     private String name;
     private double rating;
+    private int numberOfSeasons;
+
+    public Series(Long id, String name, double rating, int numberOfSeasons) {
+        this.id = id;
+        this.name = name;
+        this.rating = rating;
+        this.numberOfSeasons = numberOfSeasons;
+    }
 
     public Series(Long id, String name, double rating) {
         Objects.requireNonNull(id, "Id cannot be null");
@@ -45,6 +53,7 @@ public class Series implements Comparable<Series> {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", rating=" + rating +
+                ", numberOfSeasons=" + numberOfSeasons +
                 '}';
     }
 
@@ -70,6 +79,14 @@ public class Series implements Comparable<Series> {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public int getNumberOfSeasons() {
+        return numberOfSeasons;
+    }
+
+    public void setNumberOfSeasons(int numberOfSeasons) {
+        this.numberOfSeasons = numberOfSeasons;
     }
 
     @Override
