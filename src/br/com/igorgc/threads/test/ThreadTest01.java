@@ -10,10 +10,8 @@ class ThreadExample extends Thread {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());
-
         for (int i = 0; i < 500; i++) {
             System.out.print(c);
-
             if (i % 100 == 0) {
                 System.out.println();
             }
@@ -31,10 +29,8 @@ class ThreadExampleRunnable implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());
-
         for (int i = 0; i < 500; i++) {
             System.out.print(c);
-
             if (i % 100 == 0) {
                 System.out.println();
             }
@@ -59,5 +55,7 @@ public class ThreadTest01 {
         t2.start();
         t3.start();
         t4.start();
+
+        System.out.println("############################# " + Thread.currentThread().getName());
     }
 }
