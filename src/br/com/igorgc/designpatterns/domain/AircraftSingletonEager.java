@@ -25,4 +25,6 @@ public final class AircraftSingletonEager {
     public boolean bookSeat(String seat) {
         return availableSeats.remove(seat);
     }
+
+
 }
